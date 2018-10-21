@@ -1,0 +1,43 @@
+﻿@model EngineerTest.Models.TheMovieDb
+<style>
+    body {
+        background-color: #000;
+    }
+
+    #apiDiv {
+        padding-left: 20px;
+        display: inline-block;
+        width: 95%;
+        text-align: justify;
+    }
+
+        #apiDiv h4 {
+            margin: 10px 0;
+        }
+
+        #apiDiv .biography img {
+            float: left;
+            padding-right: 10px;
+        }
+
+        #apiDiv .return {
+            text-align: center;
+        }
+
+            #apiDiv .return a {
+                color: #00e8ff;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+</style>
+@{ ViewBag.Title = "Implementing TheMovieDB (TMDB) API";}
+<h1>Implementing The Movie Database API</h1>
+<h2><a>Asp.net core TBDB api test» </a></h2>
+<div id="apiDiv">
+    <div class="return"><a href="@Url.Action("Index", "TmdbApi")">Return</a></div>
+    <h4>@Model.title</h4>
+    <p class="Detail"><img src="@Model.poster_path" />@Model.poster_path</p>
+    <p>Popularity: @Model.popularity</p>
+    <p>Release Date: @Model.release_date</p>
+    <p>Overview: @Model.overview</p>
+</div>
